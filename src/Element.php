@@ -20,5 +20,12 @@ use Pronamic\WordPress\Html;
  * @since   1.0.0
  */
 class Element {
-	
+	/**
+	 * Construct HTML element.
+	 *
+	 * @param string $tag Tag name.
+	 */
+	public function __construct( $tag ) {
+		$this->tag = $tag;
+	}
 }
