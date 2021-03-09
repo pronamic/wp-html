@@ -26,6 +26,67 @@ class Element {
 	 * @param string $tag Tag name.
 	 */
 	public function __construct( $tag ) {
-		$this->tag = $tag;
+		$this->tag        = $tag;
+		$this->attributes = array();
+	}
+
+	/**
+	 * Is void element.
+	 *
+	 * @link https://html.spec.whatwg.org/multipage/syntax.html#void-elements
+	 * @link http://xahlee.info/js/html5_non-closing_tag.html
+	 */
+	public function is_void_element() {
+		return \in_array(
+			$this->tag,
+			array(
+				'area',
+				'base',
+				'br',
+				'col',
+				'embed',
+				'hr',
+				'img',
+				'input',
+				'link',
+				'meta',
+				'param',
+				'source',
+				'track',
+				'wbr',
+			),
+			true
+		);
+	}
+
+	/**
+	 * Render.
+	 *
+	 * @return string
+	 */
+	public function render() {
+		$result = '<' . $this->tag;
+
+		if ( \count( $this->attributes ) > 0 ) {
+			$result .= ' ';
+
+			$atts = array();
+
+			foreach ( $this->attributes as $attribute => $value ) {
+				$atts[] = '' . $attribute . '="' . \esc_attr( $value ) . '"';
+			}
+
+			$result .= \implode( ' ', $atts );
+		}
+
+		if ( $this->is_void_element() ) {
+			$result .= ' />';
+
+			return $result;
+		}
+
+		$result .= '>' . $this->content . '</' . $this->tag . '>';
+
+		return $result;
 	}
 }
