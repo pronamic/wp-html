@@ -1,5 +1,5 @@
 {
-	"name": "pronamic/wp-number",
+	"name": "pronamic/wp-html",
 	"description": "WordPress HTML library.",
 	"autoload": {
 		"psr-4": {
