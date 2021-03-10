@@ -10,24 +10,23 @@
 
 namespace Pronamic\WordPress\Html;
 
-use Pronamic\WordPress\Html;
-
 /**
  * Element
  *
  * @author Remco Tolsma
  * @version 1.0.0
- * @since   1.0.0
+ * @since 1.0.0
  */
 class Element {
 	/**
 	 * Construct HTML element.
 	 *
-	 * @param string $tag Tag name.
+	 * @param string $tag        Tag name.
+	 * @param array  $attributes Attributes.
 	 */
-	public function __construct( $tag ) {
+	public function __construct( $tag, $attributes = array() ) {
 		$this->tag        = $tag;
-		$this->attributes = array();
+		$this->attributes = $attributes;
 	}
 
 	/**
@@ -72,8 +71,8 @@ class Element {
 
 			$atts = array();
 
-			foreach ( $this->attributes as $attribute => $value ) {
-				$atts[] = '' . $attribute . '="' . \esc_attr( $value ) . '"';
+			foreach ( $this->attributes as $name => $value ) {
+				$atts[] = '' . $name . '="' . \esc_attr( $value ) . '"';
 			}
 
 			$result .= \implode( ' ', $atts );
@@ -88,5 +87,14 @@ class Element {
 		$result .= '>' . $this->content . '</' . $this->tag . '>';
 
 		return $result;
+	}
+
+	/**
+	 * To string.
+	 *
+	 * @return string
+	 */
+	public function __toString() {
+		return $this->render();
 	}
 }
