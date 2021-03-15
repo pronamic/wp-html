@@ -27,6 +27,7 @@ class Element {
 	public function __construct( $tag, $attributes = array() ) {
 		$this->tag        = $tag;
 		$this->attributes = $attributes;
+		$this->children   = array();
 	}
 
 	/**
