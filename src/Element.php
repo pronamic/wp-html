@@ -85,7 +85,13 @@ class Element {
 			return $result;
 		}
 
-		$result .= '>' . $this->content . '</' . $this->tag . '>';
+		$result .= '>';
+
+		foreach ( $this->children as $child ) {
+			$result .= $child;
+		}
+
+		$result .= '</' . $this->tag . '>';
 
 		return $result;
 	}
