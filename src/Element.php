@@ -97,6 +97,15 @@ class Element {
 	}
 
 	/**
+	 * Print.
+	 *
+	 * @return int
+	 */
+	public function print() {
+		return print $this->render();
+	}
+
+	/**
 	 * To string.
 	 *
 	 * @return string
