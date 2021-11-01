@@ -97,11 +97,11 @@ class Element {
 	}
 
 	/**
-	 * Print.
+	 * Print output.
 	 *
 	 * @return int
 	 */
-	public function print() {
+	public function output() {
 		return print $this->render();
 	}
 
