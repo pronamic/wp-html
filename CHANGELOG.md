@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] - 2022-01-10
 ### Changed
-- Changed `$element->print()` to `$element->output()` pronamic/wp-pronamic-pay#268.
+- Changed `$element->print()` to `$element->output()` [pronamic/wp-pronamic-pay#268](https://github.com/pronamic/wp-pronamic-pay/issues/268).
 
 ## [1.0.0] - 2021-04-01
 - First release.
