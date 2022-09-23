@@ -37,7 +37,7 @@ class Attribute {
 	public function is_boolean_attribute() {
 		return \in_array(
 			$this->name,
-			array(
+			[
 				'required',
 				'disabled',
 				'checked',
@@ -47,7 +47,7 @@ class Attribute {
 				'novalidate',
 				'formnovalidate',
 				'autofocus',
-			),
+			],
 			true
 		);
 	}

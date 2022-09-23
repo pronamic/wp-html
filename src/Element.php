@@ -24,10 +24,10 @@ class Element {
 	 * @param string $tag        Tag name.
 	 * @param array  $attributes Attributes.
 	 */
-	public function __construct( $tag, $attributes = array() ) {
+	public function __construct( $tag, $attributes = [] ) {
 		$this->tag        = $tag;
 		$this->attributes = $attributes;
-		$this->children   = array();
+		$this->children   = [];
 	}
 
 	/**
@@ -39,7 +39,7 @@ class Element {
 	public function is_void_element() {
 		return \in_array(
 			$this->tag,
-			array(
+			[
 				'area',
 				'base',
 				'br',
@@ -54,7 +54,7 @@ class Element {
 				'source',
 				'track',
 				'wbr',
-			),
+			],
 			true
 		);
 	}
@@ -70,7 +70,7 @@ class Element {
 		if ( \count( $this->attributes ) > 0 ) {
 			$result .= ' ';
 
-			$atts = array();
+			$atts = [];
 
 			foreach ( $this->attributes as $name => $value ) {
 				$atts[] = '' . $name . '="' . \esc_attr( $value ) . '"';
@@ -102,6 +102,7 @@ class Element {
 	 * @return int
 	 */
 	public function output() {
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		return print $this->render();
 	}
 

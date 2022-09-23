@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<ruleset name="Pronamic HTML rules">
+	<file>.</file>
+
+	<exclude-pattern>tests/bootstrap.php</exclude-pattern>
+	<exclude-pattern>tests/wp-config.php</exclude-pattern>
+
+	<rule ref="PronamicWP">
+		<exclude name="Squiz.Commenting" />
+	</rule>
+</ruleset>
