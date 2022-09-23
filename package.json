@@ -1,0 +1,19 @@
+{
+	"name": "wp-html",
+	"version": "2.0.2",
+	"description": "WordPress HTML library.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pronamic/wp-html.git"
+	},
+	"keywords": [
+		"pronamic",
+		"wordpress",
+		"html"
+	],
+	"license": "GPL-3.0-or-later",
+	"bugs": {
+		"url": "https://github.com/pronamic/wp-html/issues"
+	},
+	"homepage": "https://github.com/pronamic/wp-html#readme"
+}
