@@ -19,6 +19,27 @@ namespace Pronamic\WordPress\Html;
  */
 class Element {
 	/**
+	 * Element tag.
+	 *
+	 * @var string
+	 */
+	public string $tag;
+
+	/**
+	 * Element attributes.
+	 *
+	 * @var string
+	 */
+	public array $attributes;
+
+	/**
+	 * Children.
+	 *
+	 * @var array
+	 */
+	public array $children;
+
+	/**
 	 * Construct HTML element.
 	 *
 	 * @param string $tag        Tag name.
