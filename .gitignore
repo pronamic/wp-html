@@ -1,9 +1,15 @@
+# Build
+/build/
+
 # Composer
 /composer.lock
 /vendor/
 
 # Composer bin plugin
 /vendor-bin/**/vendor
+
+# PHPUnit
+/.phpunit.result.cache
 
 # WordPress
 /wordpress/

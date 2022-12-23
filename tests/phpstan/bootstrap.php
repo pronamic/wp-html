@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap tests
+ * Definitions for PHPStan.
  *
  * @author    Pronamic <info@pronamic.eu>
  * @copyright 2005-2022 Pronamic
@@ -8,9 +8,4 @@
  * @package   Pronamic\WordPress\Html
  */
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
-/**
- * WorDBless.
- */
-\WorDBless\Load::load();
+define( 'SCRIPT_DEBUG', true );

@@ -5,7 +5,7 @@
  * @author    Pronamic <info@pronamic.eu>
  * @copyright 2005-2022 Pronamic
  * @license   GPL-3.0-or-later
- * @package   Pronamic\WordPress\Number
+ * @package   Pronamic\WordPress\Html
  */
 
 namespace Pronamic\WordPress\Html;
@@ -28,22 +28,22 @@ class Element {
 	/**
 	 * Element attributes.
 	 *
-	 * @var string
+	 * @var array<string, int|float|string|bool>
 	 */
 	public array $attributes;
 
 	/**
 	 * Children.
 	 *
-	 * @var array
+	 * @var array<string>
 	 */
 	public array $children;
 
 	/**
 	 * Construct HTML element.
 	 *
-	 * @param string $tag        Tag name.
-	 * @param array  $attributes Attributes.
+	 * @param string                               $tag        Tag name.
+	 * @param array<string, int|float|string|bool> $attributes Attributes.
 	 */
 	public function __construct( $tag, $attributes = [] ) {
 		$this->tag        = $tag;
@@ -57,7 +57,7 @@ class Element {
 	 * @link https://html.spec.whatwg.org/multipage/syntax.html#void-elements
 	 * @link http://xahlee.info/js/html5_non-closing_tag.html
 	 */
-	public function is_void_element() {
+	public function is_void_element(): bool {
 		return \in_array(
 			$this->tag,
 			[
@@ -94,7 +94,7 @@ class Element {
 			$atts = [];
 
 			foreach ( $this->attributes as $name => $value ) {
-				$atts[] = '' . $name . '="' . \esc_attr( $value ) . '"';
+				$atts[] = '' . $name . '="' . \esc_attr( (string) $value ) . '"';
 			}
 
 			$result .= \implode( ' ', $atts );

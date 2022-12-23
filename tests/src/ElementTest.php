@@ -5,10 +5,12 @@
  * @author    Pronamic <info@pronamic.eu>
  * @copyright 2005-2022 Pronamic
  * @license   GPL-3.0-or-later
- * @package   Pronamic\WordPress\Pay\Payments
+ * @package   Pronamic\WordPress\Html
  */
 
 namespace Pronamic\WordPress\Html;
+
+use PHPUnit\Framework\TestCase;
 
 /**
  * Element test
@@ -17,7 +19,7 @@ namespace Pronamic\WordPress\Html;
  * @version 1.0.0
  * @since   1.0.0
  */
-class ElementTest extends \WP_UnitTestCase {
+class ElementTest extends TestCase {
 	/**
 	 * Test element.
 	 */

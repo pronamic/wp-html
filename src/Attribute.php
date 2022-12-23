@@ -5,7 +5,7 @@
  * @author    Pronamic <info@pronamic.eu>
  * @copyright 2005-2022 Pronamic
  * @license   GPL-3.0-or-later
- * @package   Pronamic\WordPress\Number
+ * @package   Pronamic\WordPress\Html
  */
 
 namespace Pronamic\WordPress\Html;
@@ -18,6 +18,16 @@ namespace Pronamic\WordPress\Html;
  * @since 1.0.0
  */
 class Attribute {
+	/**
+	 * Name.
+	 */
+	private string $name;
+
+	/**
+	 * Value.
+	 */
+	private ?string $value;
+
 	/**
 	 * Construct attribute.
 	 *
@@ -34,7 +44,7 @@ class Attribute {
 	 *
 	 * @link https://www.w3.org/TR/html51/infrastructure.html#boolean-attribute
 	 */
-	public function is_boolean_attribute() {
+	public function is_boolean_attribute(): bool {
 		return \in_array(
 			$this->name,
 			[
