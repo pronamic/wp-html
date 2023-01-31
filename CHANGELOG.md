@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.1] - 2023-01-31
+### Composer
+
+- Changed `php` from `>=8.0` to `>=7.4`.
+
+Full set of changes: [`2.1.0...2.1.1`][2.1.1]
+
+[2.1.1]: https://github.com/pronamic/wp-html/compare/v2.1.0...v2.1.1
+
 ## [2.1.0] - 2022-12-19
 - Increased minimum PHP version to version `8` or higher.
 - Improved support for PHP `8.1` and `8.2`.
