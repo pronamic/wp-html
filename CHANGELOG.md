@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.2] - 2023-03-03
+### Changed
+
+- Updated `.gitattributes` file.
+
+Full set of changes: [`2.1.1...2.1.2`][2.1.2]
+
+[2.1.2]: https://github.com/pronamic/wp-html/compare/v2.1.1...v2.1.2
+
 ## [2.1.1] - 2023-01-31
 ### Composer
 
