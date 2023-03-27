@@ -1,6 +1,7 @@
 {
 	"name": "pronamic/wp-html",
 	"description": "WordPress HTML library.",
+	"type": "wordpress-plugin",
 	"autoload": {
 		"psr-4": {
 			"Pronamic\\WordPress\\Html\\": "src"
