@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.3] - 2023-03-27
+
+### Commits
+
+- Set Composer to WordPress plugin. ([0ad603b](https://github.com/pronamic/wp-html/commit/0ad603b551107bf6f144395f32aa2a4292bb5fd0))
+
+Full set of changes: [`2.1.2...2.1.3`][2.1.3]
+
+[2.1.3]: https://github.com/pronamic/wp-html/compare/v2.1.2...v2.1.3
+
 ## [2.1.2] - 2023-03-03
 ### Changed
 
