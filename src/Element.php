@@ -86,44 +86,58 @@ class Element {
 	 * @return string
 	 */
 	public function render() {
-		$result = '<' . $this->tag;
+		\ob_start();
 
-		if ( \count( $this->attributes ) > 0 ) {
-			$result .= ' ';
+		$this->output();
 
-			$atts = [];
+		$output = \ob_get_clean();
 
-			foreach ( $this->attributes as $name => $value ) {
-				$atts[] = '' . $name . '="' . \esc_attr( (string) $value ) . '"';
-			}
-
-			$result .= \implode( ' ', $atts );
+		if ( false === $output ) {
+			throw new \Exception( 'Output buffering is not active.' );
 		}
 
-		if ( $this->is_void_element() ) {
-			$result .= ' />';
-
-			return $result;
-		}
-
-		$result .= '>';
-
-		foreach ( $this->children as $child ) {
-			$result .= $child;
-		}
-
-		$result .= '</' . $this->tag . '>';
-
-		return $result;
+		return $output;
 	}
 
 	/**
-	 * Print output.
+	 * Output.
 	 *
-	 * @return int
+	 * @return void
 	 */
 	public function output() {
-		return print $this->render();
+		echo '<', \tag_escape( $this->tag );
+
+		foreach ( $this->attributes as $name => $value ) {
+			/**
+			 * Attribute name escape.
+			 * 
+			 * There is currently not a specific escape function for HTML attributes.
+			 * 
+			 * @link https://core.trac.wordpress.org/ticket/43010
+			 * @link https://html.spec.whatwg.org/multipage/syntax.html#attributes-2
+			 */
+			echo ' ', \esc_html( $name ), '="', \esc_attr( (string) $value ), '"';
+		}
+
+		if ( $this->is_void_element() ) {
+			echo ' />';
+
+			return;
+		}
+
+		echo '>';
+
+		foreach ( $this->children as $child ) {
+			if ( $child instanceof self ) {
+				$child->output();
+			}
+
+			if ( \is_string( $child ) ) {
+				echo \esc_html( $child );
+			}
+		}
+
+		echo '</', \tag_escape( $this->tag ), '>';
 	}
 
 	/**
