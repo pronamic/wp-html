@@ -123,7 +123,6 @@ class Element {
 	 * @return int
 	 */
 	public function output() {
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		return print $this->render();
 	}
 
