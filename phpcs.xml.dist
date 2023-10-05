@@ -7,6 +7,6 @@
 	<exclude-pattern>tests/wp-config.php</exclude-pattern>
 
 	<rule ref="PronamicWP">
-		<exclude name="Squiz.Commenting" />
+
 	</rule>
 </ruleset>

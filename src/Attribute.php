@@ -20,11 +20,15 @@ namespace Pronamic\WordPress\Html;
 class Attribute {
 	/**
 	 * Name.
+	 * 
+	 * @var string|null
 	 */
 	private string $name;
 
 	/**
 	 * Value.
+	 * 
+	 * @var string|null
 	 */
 	private ?string $value;
 

@@ -84,6 +84,7 @@ class Element {
 	 * Render.
 	 *
 	 * @return string
+	 * @throws \Exception Throws exception if output buffering is not active.
 	 */
 	public function render() {
 		\ob_start();
