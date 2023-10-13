@@ -9,6 +9,7 @@
 /vendor-bin/**/vendor
 
 # PHPUnit
+/.phpunit.cache/
 /.phpunit.result.cache
 
 # WordPress

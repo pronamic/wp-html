@@ -1,27 +1,18 @@
 <?xml version="1.0"?>
-
-<phpunit
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	bootstrap="tests/bootstrap.php"
-	backupGlobals="false"
-	colors="true"
-	convertErrorsToExceptions="true"
-	convertNoticesToExceptions="true"
-	convertWarningsToExceptions="true"
-	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
->
-	<testsuites>
-		<testsuite name="Pronamic Money">
-			<directory suffix=".php">./tests/src</directory>
-		</testsuite>
-	</testsuites>
-
-	<coverage>
-		<include>
-			<directory suffix=".php">src</directory>
-		</include>
-		<report>
-			<clover outputFile="build/logs/clover.xml"/>
-		</report>
-	</coverage>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="tests/bootstrap.php" backupGlobals="false" colors="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.4/phpunit.xsd" cacheDirectory=".phpunit.cache">
+  <testsuites>
+    <testsuite name="Pronamic Money">
+      <directory suffix=".php">./tests/src</directory>
+    </testsuite>
+  </testsuites>
+  <coverage>
+    <report>
+      <clover outputFile="build/logs/clover.xml"/>
+    </report>
+  </coverage>
+  <source>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+  </source>
 </phpunit>
