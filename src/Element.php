@@ -35,7 +35,7 @@ class Element {
 	/**
 	 * Children.
 	 *
-	 * @var array<string>
+	 * @var array<string|self>
 	 */
 	public array $children;
 
