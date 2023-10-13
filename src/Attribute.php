@@ -21,7 +21,7 @@ class Attribute {
 	/**
 	 * Name.
 	 * 
-	 * @var string|null
+	 * @var string
 	 */
 	private string $name;
 
