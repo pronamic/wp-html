@@ -134,7 +134,14 @@ class Element {
 			}
 
 			if ( \is_string( $child ) ) {
-				echo \esc_html( $child );
+				switch ( $this->tag ) {
+					case 'textarea':
+						echo \esc_textarea( $child );
+						break;
+					default:
+						echo \esc_html( $child );
+						break;
+				}               
 			}
 		}
 
