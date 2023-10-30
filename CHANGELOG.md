@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.1] - 2023-10-30
+
+### Commits
+
+- Improve escaping for `<textarea>` elements. ([8cf99cb](https://github.com/pronamic/wp-html/commit/8cf99cb0ecadac344ae99f493e1cd1beef6b6e60))
+
+Full set of changes: [`2.2.0...2.2.1`][2.2.1]
+
+[2.2.1]: https://github.com/pronamic/wp-html/compare/v2.2.0...v2.2.1
+
 ## [2.2.0] - 2023-10-13
 
 ### Commits
