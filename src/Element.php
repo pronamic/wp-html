@@ -3,7 +3,7 @@
  * Element
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2023 Pronamic
+ * @copyright 2005-2024 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Html
  */
@@ -111,9 +111,9 @@ class Element {
 		foreach ( $this->attributes as $name => $value ) {
 			/**
 			 * Attribute name escape.
-			 * 
+			 *
 			 * There is currently not a specific escape function for HTML attributes.
-			 * 
+			 *
 			 * @link https://core.trac.wordpress.org/ticket/43010
 			 * @link https://html.spec.whatwg.org/multipage/syntax.html#attributes-2
 			 */
@@ -141,7 +141,7 @@ class Element {
 					default:
 						echo \esc_html( $child );
 						break;
-				}               
+				}
 			}
 		}
 
