@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.2] - 2024-12-17
+
+### Commits
+
+- Happy 2024. ([faed14b](https://github.com/pronamic/wp-html/commit/faed14bc8a7bbe234c0e0125149514fd0ef06446))
+
+### Composer
+
+- Changed `php` from `>=7.4` to `>=8.1`.
+
+Full set of changes: [`2.2.1...2.2.2`][2.2.2]
+
+[2.2.2]: https://github.com/pronamic/wp-html/compare/v2.2.1...v2.2.2
+
 ## [2.2.1] - 2023-10-30
 
 ### Commits
